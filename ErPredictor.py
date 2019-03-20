@@ -27,7 +27,7 @@ class ErPredictor:
             self.model.load_weights(model_weight)
             adam = Adam(lr=0.0001)
             self.model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['accuracy'])
-        except Exception, e:
+        except Exception, e: 
             print e
             sys.exit(1)
 
