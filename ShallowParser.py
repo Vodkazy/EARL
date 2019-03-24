@@ -8,6 +8,7 @@
 """
 from practnlptools.tools import Annotator
 
+
 class ShallowParser:
     def __init__(self):
         print "ShallowParser Initializing..."
@@ -136,5 +137,5 @@ class ShallowParser:
 
 if __name__ == '__main__':
     s = ShallowParser()
-    print s.shallowParse('Who is the parent organisation of Barack Obama ?')
+    print s.shallowParse('Who is the parent organisation of Barack Obama?')
     # Result is [[('parent', 'I-NP', 11, 6), ('organisation', 'E-NP', 18, 12)], [('Barack', 'B-NP', 34, 6), ('Obama', 'E-NP', 41, 5)]]

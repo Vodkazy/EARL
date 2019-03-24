@@ -9,6 +9,7 @@
 from keras.models import model_from_json
 from keras.optimizers import Adam
 import numpy as np
+import sys
 
 
 class ErPredictor:
@@ -47,7 +48,7 @@ class ErPredictor:
                 combined_phase = []
                 for word in chunk:
                     combined_phase.append(word[0])
-                    end_pddos = word[2] + word[3]
+                    end_pos = word[2] + word[3]
                 combined_phase = ' '.join(combined_phase)
                 combined_chunks.append((combined_phase, surface_start, end_pos - surface_start))
 
@@ -79,6 +80,7 @@ class ErPredictor:
 if __name__ == '__main__':
     e = ErPredictor()
     print e.erpredict(
-        [[['Who', 'S-NP', 0, 3]], [['the', 'B-NP', 7, 3], ['parent', 'I-NP', 11, 6], ['organisation', 'E-NP', 18, 12]],
-         [['Barack', 'B-NP', 34, 6], ['Obama', 'E-NP', 41, 5]], [['is', 'S-VP', 4, 2]]])
-    # Result is "[{'chunk': 'Who', 'surfacelength': 0, 'class': 'entity', 'surfacestart': 0}, {'chunk': 'the parent organisation', 'surfacelength': 0, 'class': 'relation', 'surfacestart': 7}, {'chunk': 'Barack Obama', 'surfacelength': 0, 'class': 'entity', 'surfacestart': 34}, {'chunk': 'is', 'surfacelength': 0, 'class': 'relation', 'surfacestart': 4}]"
+        [[('parent', 'I-NP', 11, 6), ('organisation', 'E-NP', 18, 12)],
+         [('Barack', 'B-NP', 34, 6), ('Obama', 'E-NP', 41, 5)]]
+    )
+    # Result is [{'chunk': 'parent organisation', 'surfacelength': 0, 'class': 'relation', 'surfacestart': 11}, {'chunk': 'Barack Obama', 'surfacelength': 0, 'class': 'entity', 'surfacestart': 34}]
