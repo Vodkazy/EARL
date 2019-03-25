@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74d59ca7-6ebd-4ee4-937a-41f151cef143" name="默认的" comment="默认的">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JointLinker.py" afterPath="$PROJECT_DIR$/JointLinker.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,6 +17,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ErPredictor.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ErPredictor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TextMatch.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TextMatch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ReRanker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ReRanker.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -33,8 +53,8 @@
       <file leaf-file-name="JointLinker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JointLinker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="582">
-              <caret line="172" column="14" lean-forward="false" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+            <state relative-caret-position="218">
+              <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="23" />
               <folding>
                 <element signature="e#160#176#0" expanded="true" />
                 <element signature="e#4192#7742#0" expanded="false" />
@@ -45,13 +65,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShallowParser.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ShallowParser.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShallowParser.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="139" column="75" lean-forward="true" selection-start-line="139" selection-start-column="75" selection-end-line="139" selection-end-column="75" />
+            <state relative-caret-position="226">
+              <caret line="139" column="73" lean-forward="false" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="73" />
               <folding>
                 <element signature="e#357#7086#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Main.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="352">
+              <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+              <folding>
+                <element signature="e#154#193#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,6 +109,7 @@
       <find>topk_lists</find>
       <find>topk_matched</find>
       <find>topkmatches</find>
+      <find>and</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/scripts/ER_predictor</dir>
@@ -114,6 +147,7 @@
         <option value="$PROJECT_DIR$/JointLinker.py" />
         <option value="$PROJECT_DIR$/ReRanker.py" />
         <option value="$PROJECT_DIR$/ShallowParser.py" />
+        <option value="$PROJECT_DIR$/Main.py" />
       </list>
     </option>
   </component>
@@ -210,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ReRanker">
+  <component name="RunManager" selected="Python.ShallowParser">
     <configuration default="false" name="ReRanker" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,6 +258,42 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="照耀" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReRanker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="照耀" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ShallowParser" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="照耀" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ShallowParser.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -293,12 +363,16 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.ReRanker" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Main" />
+      <item index="2" class="java.lang.String" itemvalue="Python.ShallowParser" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.ReRanker" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Python.ShallowParser" />
+        <item index="1" class="java.lang.String" itemvalue="Python.ReRanker" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -329,15 +403,16 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="60" y="-1" width="1860" height="984" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18353067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18902439" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3074246" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3364269" sideWeight="0.50215286" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3473054" sideWeight="0.49784714" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32934132" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -552,26 +627,6 @@
     <entry file="file://$PROJECT_DIR$/2222.py" />
     <entry file="file://$PROJECT_DIR$/11111.py" />
     <entry file="file://$PROJECT_DIR$/TextMatchServer.py" />
-    <entry file="file://$PROJECT_DIR$/ErPredictor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-          <folding>
-            <element signature="e#160#200#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TextMatch.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="139" column="72" lean-forward="false" selection-start-line="139" selection-start-column="72" selection-end-line="139" selection-end-column="72" />
-          <folding>
-            <element signature="e#158#169#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ReRanker.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="400">
@@ -583,10 +638,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TextMatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="105" column="29" lean-forward="false" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ErPredictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JointLinker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="582">
-          <caret line="172" column="14" lean-forward="false" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
+        <state relative-caret-position="218">
+          <caret line="93" column="23" lean-forward="false" selection-start-line="93" selection-start-column="15" selection-end-line="93" selection-end-column="23" />
           <folding>
             <element signature="e#160#176#0" expanded="true" />
             <element signature="e#4192#7742#0" expanded="false" />
@@ -598,10 +669,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ShallowParser.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="139" column="75" lean-forward="true" selection-start-line="139" selection-start-column="75" selection-end-line="139" selection-end-column="75" />
+        <state relative-caret-position="226">
+          <caret line="139" column="73" lean-forward="false" selection-start-line="139" selection-start-column="26" selection-end-line="139" selection-end-column="73" />
           <folding>
             <element signature="e#357#7086#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="19" column="17" lean-forward="true" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+          <folding>
+            <element signature="e#154#193#0" expanded="true" />
           </folding>
         </state>
       </provider>
