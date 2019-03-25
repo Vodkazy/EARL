@@ -71,7 +71,7 @@ class TextMatch:
                 res = self.es.search(index="dbentityindex11", doc_type="records", body={
                     "query": {
                         "multi_match": {"query": chunk['chunk'], "fields": ["wikidataLabel", "dbpediaLabel^1.5"]}},
-                    "size": 250})
+                    "size": 500})
                 temp_topk = []
                 res_topk = []
                 for record in res['hits']['hits']:

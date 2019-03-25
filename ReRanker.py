@@ -26,6 +26,7 @@ class ReRanker:
         print "ReRanker initialized"
 
     def reRank(self, topk_res):
+        rerankedlists = {}
         for _index, uris_with_features in topk_res['nodefeatures'].iteritems():  # travel all the nodes{0:'xxxxx'}
             features = []
             uris = []
@@ -49,7 +50,6 @@ class ReRanker:
             else:
                 self.change_type_arr[_index] = False
             score_uri_list = [(float(score), uri) for score, uri in zip(_output, uris)]
-            rerankedlists = {}
             rerankedlists[_index] = sorted(score_uri_list, key=lambda x: x[0], reverse=True)
         return {'rerankedlists': rerankedlists, 'chunktext': topk_res['chunktext'], 'types': topk_res['types'],
                 'rejudge': self.change_flag, 'correct-list': self.change_type_arr}
