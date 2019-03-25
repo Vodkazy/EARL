@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="74d59ca7-6ebd-4ee4-937a-41f151cef143" name="默认的" comment="默认的">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ErPredictor.py" afterPath="$PROJECT_DIR$/ErPredictor.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShallowParser.py" afterPath="$PROJECT_DIR$/ShallowParser.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TextMatch.py" afterPath="$PROJECT_DIR$/TextMatch.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JointLinker.py" afterPath="$PROJECT_DIR$/JointLinker.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -19,49 +17,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ErPredictor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ErPredictor.py">
+      <file leaf-file-name="ReRanker.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ReRanker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+            <state relative-caret-position="400">
+              <caret line="134" column="103" lean-forward="false" selection-start-line="134" selection-start-column="93" selection-end-line="134" selection-end-column="105" />
               <folding>
-                <element signature="e#160#200#0" expanded="true" />
+                <element signature="e#157#178#0" expanded="true" />
+                <element signature="e#2414#9475#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TextMatch.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TextMatch.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="139" column="72" lean-forward="false" selection-start-line="139" selection-start-column="72" selection-end-line="139" selection-end-column="72" />
-              <folding>
-                <element signature="e#158#169#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ShallowParser.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShallowParser.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="140" column="78" lean-forward="false" selection-start-line="140" selection-start-column="78" selection-end-line="140" selection-end-column="78" />
-              <folding>
-                <element signature="e#357#7086#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JointLinker.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JointLinker.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/JointLinker.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+            <state relative-caret-position="582">
+              <caret line="172" column="14" lean-forward="false" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
               <folding>
                 <element signature="e#160#176#0" expanded="true" />
+                <element signature="e#4192#7742#0" expanded="false" />
+                <element signature="e#4202#4330#0" expanded="false" />
+                <element signature="e#7767#10963#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShallowParser.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ShallowParser.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="139" column="75" lean-forward="true" selection-start-line="139" selection-start-column="75" selection-end-line="139" selection-end-column="75" />
+              <folding>
+                <element signature="e#357#7086#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -120,9 +110,10 @@
         <option value="$PROJECT_DIR$/11111.py" />
         <option value="$PROJECT_DIR$/TextMatchServer.py" />
         <option value="$PROJECT_DIR$/TextMatch.py" />
-        <option value="$PROJECT_DIR$/ShallowParser.py" />
         <option value="$PROJECT_DIR$/ErPredictor.py" />
         <option value="$PROJECT_DIR$/JointLinker.py" />
+        <option value="$PROJECT_DIR$/ReRanker.py" />
+        <option value="$PROJECT_DIR$/ShallowParser.py" />
       </list>
     </option>
   </component>
@@ -130,7 +121,7 @@
     <option name="x" value="60" />
     <option name="y" value="-1" />
     <option name="width" value="1860" />
-    <option name="height" value="938" />
+    <option name="height" value="984" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -194,8 +185,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,7 +210,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.ReRanker">
+    <configuration default="false" name="ReRanker" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="照耀" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ReRanker.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -284,6 +293,14 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Python.ReRanker" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Python.ReRanker" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -311,13 +328,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="60" y="-1" width="1860" height="938" extended-state="6" />
-    <editor active="true" />
+    <frame x="60" y="-1" width="1860" height="984" extended-state="6" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18353067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18353067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30637255" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3074246" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -365,17 +381,57 @@
           <line>40</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/ErPredictor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+          <folding>
+            <element signature="e#160#200#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TextMatch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3614">
+          <caret line="139" column="72" lean-forward="false" selection-start-line="139" selection-start-column="72" selection-end-line="139" selection-end-column="72" />
+          <folding>
+            <element signature="e#158#169#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShallowParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3640">
+          <caret line="140" column="78" lean-forward="false" selection-start-line="140" selection-start-column="78" selection-end-line="140" selection-end-column="78" />
+          <folding>
+            <element signature="e#357#7086#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JointLinker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+          <folding>
+            <element signature="e#160#176#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TextMatch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
           <caret line="17" column="38" lean-forward="true" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
           <folding>
-            <element signature="e#158#169#0" expanded="true" />
+            <element signature="e#158#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -385,7 +441,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#158#169#0" expanded="true" />
+            <element signature="e#158#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -405,7 +461,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#158#169#0" expanded="true" />
+            <element signature="e#158#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -425,7 +481,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#158#169#0" expanded="true" />
+            <element signature="e#158#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -435,7 +491,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#158#169#0" expanded="true" />
+            <element signature="e#158#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -459,7 +515,7 @@
         <state relative-caret-position="85">
           <caret line="5" column="27" lean-forward="true" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
           <folding>
-            <element signature="e#158#169#0" expanded="true" />
+            <element signature="e#158#169#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -496,42 +552,56 @@
     <entry file="file://$PROJECT_DIR$/2222.py" />
     <entry file="file://$PROJECT_DIR$/11111.py" />
     <entry file="file://$PROJECT_DIR$/TextMatchServer.py" />
-    <entry file="file://$PROJECT_DIR$/ShallowParser.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="140" column="78" lean-forward="false" selection-start-line="140" selection-start-column="78" selection-end-line="140" selection-end-column="78" />
-          <folding>
-            <element signature="e#357#7086#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ErPredictor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
+        <state relative-caret-position="26">
           <caret line="48" column="34" lean-forward="false" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
           <folding>
-            <element signature="e#160#200#0" expanded="true" />
+            <element signature="e#160#200#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TextMatch.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
+        <state relative-caret-position="26">
           <caret line="139" column="72" lean-forward="false" selection-start-line="139" selection-start-column="72" selection-end-line="139" selection-end-column="72" />
           <folding>
-            <element signature="e#158#169#0" expanded="true" />
+            <element signature="e#158#169#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ReRanker.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="134" column="103" lean-forward="false" selection-start-line="134" selection-start-column="93" selection-end-line="134" selection-end-column="105" />
+          <folding>
+            <element signature="e#157#178#0" expanded="true" />
+            <element signature="e#2414#9475#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/JointLinker.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        <state relative-caret-position="582">
+          <caret line="172" column="14" lean-forward="false" selection-start-line="172" selection-start-column="14" selection-end-line="172" selection-end-column="14" />
           <folding>
             <element signature="e#160#176#0" expanded="true" />
+            <element signature="e#4192#7742#0" expanded="false" />
+            <element signature="e#4202#4330#0" expanded="false" />
+            <element signature="e#7767#10963#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShallowParser.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="139" column="75" lean-forward="true" selection-start-line="139" selection-start-column="75" selection-end-line="139" selection-end-column="75" />
+          <folding>
+            <element signature="e#357#7086#0" expanded="false" />
           </folding>
         </state>
       </provider>

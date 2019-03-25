@@ -89,7 +89,9 @@ class JointLinker:
                 nodes[uris_index][uri]['connections'] /= float(len(topk_matched_list))
                 nodes[uris_index][uri]['total_hops'] /= float(len(topk_matched_list))
 
-        return {'nodefeatures': nodes, 'chunktext': chunks, 'types': types}
+        topk_res = {'nodefeatures': nodes, 'chunktext': chunks, 'types': types}
+
+        return topk_res
 
 
 if __name__ == '__main__':
@@ -167,7 +169,8 @@ if __name__ == '__main__':
     #         0: {u'http://dbpedia.org/ontology/parentCompany': {'connections': 0.0, 'total_hops': 0.0, 'rank': 13},
     #             u'http://dbpedia.org/ontology/parentOrganisation': {'connections': 0.0, 'total_hops': 0.0, 'rank': 1},
     #             u'http://dbpedia.org/ontology/childOrganisation': {'connections': 0.0, 'total_hops': 0.0, 'rank': 7},
-    #             u'http://dbpedia.org/ontology/parent': {'connections': 12.0, 'total_hops': 6.0, 'rank': 19}}, 1: {
+    #             u'http://dbpedia.org/ontology/parent': {'connections': 12.0, 'total_hops': 6.0, 'rank': 19}},
+    #         1: {
     #             u'http://dbpedia.org/resource/Barack_Obama:_The_Story': {'connections': 0.0, 'total_hops': 0.0,
     #                                                                      'rank': 11},
     #             u'http://dbpedia.org/resource/Barack_Obama,_Sr.': {'connections': 6.0, 'total_hops': 3.0, 'rank': 7},
