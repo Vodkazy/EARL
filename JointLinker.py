@@ -34,8 +34,8 @@ class JointLinker:
 
     def jointLink(self, matched_chunks):
         """
-        :param matched_chunks: 
-        :return: 
+        :param matched_chunks: The linked phrases with previous infomation and candidate uris
+        :return: Chunks with previous infomation and the features of each uri
         """
         topk_matched_list = []
         chunks = []

@@ -75,8 +75,8 @@ class ShallowParser:
 
     def shallowParse(self, text):
         """
-        :param text:
-        :return:
+        :param text: Natural Language Question
+        :return: Key chunks with position infomation
         """
         # Get the chunks of one sentence using Senna
         if '?' not in text:
@@ -120,7 +120,7 @@ class ShallowParser:
 
         # Get chunks without stop words
         all_element_set = []
-        result_chunks = []
+        result_key_chunks = []
         for i in NP_set:
             all_element_set.append(i)
         for i in VP_set:
@@ -131,8 +131,8 @@ class ShallowParser:
                 if item[0].lower() not in self.stop_words:
                     chunk_without_stopword.append(item)
             if len(chunk_without_stopword) > 0:
-                result_chunks.append(chunk_without_stopword)
-        return result_chunks
+                result_key_chunks.append(chunk_without_stopword)
+        return result_key_chunks
 
 
 if __name__ == '__main__':

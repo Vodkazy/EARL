@@ -19,7 +19,6 @@ class TextMatch:
         try:
             self.es = Elasticsearch()
             self.label2uri = {}
-            self.cache = {}
             file = open('../EARL/data/ontologylabeluridict.json')
             buff_r = file.read()
             self.label2uri = json.loads(buff_r)
@@ -61,8 +60,8 @@ class TextMatch:
 
     def textMatch(self, chunks):
         """
-        :param chunks: 
-        :return: 
+        :param chunks: The linked phrases with type and position infomation
+        :return: The linked phrases with previous infomation and candidate uris
         """
         matched_chunks = []
         for chunk in chunks:

@@ -34,15 +34,15 @@ class ErPredictor:
 
         print "Er Predictor Initialized"
 
-    def erpredict(self, chunk_with_position):
+    def erpredict(self, result_key_chunks):
         """
-        :param chunk_with_position:
-        :return:
+        :param result_key_chunks: Key chunks with position infomation
+        :return: The linked phrases with type and position infomation
         """
         try:
             # Get the chunks such as 'Barack'+'Obama' combined
             combined_chunks = []
-            for chunk in chunk_with_position:
+            for chunk in result_key_chunks:
                 surface_start = chunk[0][2]
                 end_pos = chunk[0][2]
                 combined_phase = []

@@ -26,6 +26,10 @@ class ReRanker:
         print "ReRanker initialized"
 
     def reRank(self, topk_res):
+        """
+        :param topk_res: Chunks with previous infomation and the features of each uri
+        :return: Reranklist with ranked scores and flag which means whether to rerun the pipeline 
+        """
         rerankedlists = {}
         for _index, uris_with_features in topk_res['nodefeatures'].iteritems():  # travel all the nodes{0:'xxxxx'}
             features = []
@@ -43,7 +47,8 @@ class ReRanker:
             _output = self.model.predict(_input)
             prediction = (np.max(_output))
             # print _output
-            if prediction < 0.1 and topk_res['types'][_index] == 'relation' and np.min(distance) > 1:
+            print prediction, np.min(distance)
+            if prediction < 0.1 and np.min(distance) > 1:
                 print "Change type of " + topk_res['chunktext'][_index]['chunk'] + " to entity"
                 self.change_type_arr[_index] = True
                 self.change_flag = True
