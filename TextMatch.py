@@ -7,11 +7,13 @@
   @ Software : PyCharm
 """
 import json
-import sys
 import gensim
 import numpy as np
 from elasticsearch import Elasticsearch
-
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class TextMatch:
     def __init__(self):
@@ -19,11 +21,12 @@ class TextMatch:
         try:
             self.es = Elasticsearch()
             self.label2uri = {}
-            file = open('../EARL/data/ontologylabeluridict.json')
+            self.cache = {}
+            file = open('./data/ontologylabeluridict.json')
             buff_r = file.read()
             self.label2uri = json.loads(buff_r)
             self.model = gensim.models.KeyedVectors.load_word2vec_format(
-                '../EARL/data/lexvec.commoncrawl.300d.W.pos.neg3.vectors')
+                './download/lexvec.commoncrawl.300d.W.pos.neg3.vectors')
         except Exception, e:
             print e
             sys.exit(1)
@@ -64,20 +67,23 @@ class TextMatch:
         :return: The linked phrases with previous infomation and candidate uris
         """
         matched_chunks = []
+        pagerankflag = False
         for chunk in chunks:
             # Use the Elasticsearch to generate the candidate uri of entity
             if chunk['class'] == 'entity':
                 res = self.es.search(index="dbentityindex11", doc_type="records", body={
                     "query": {
                         "multi_match": {"query": chunk['chunk'], "fields": ["wikidataLabel", "dbpediaLabel^1.5"]}},
-                    "size": 500})
+                    "size": 200}, request_timeout=60)
                 temp_topk = []
                 res_topk = []
                 for record in res['hits']['hits']:
                     temp_topk.append((record['_source']['uri'], record['_source']['edgecount']))
                 # temp_topk = sorted(temp_topk, key=lambda k: k[1], reverse=True)
+                if pagerankflag:
+                    temp_topk = sorted(temp_topk, key=lambda k: k[1], reverse=True)
                 for record in temp_topk:
-                    if (len(res_topk) >= 30):
+                    if len(res_topk) >= 30:
                         break
                     if record[0] in res_topk:
                         continue
@@ -88,20 +94,21 @@ class TextMatch:
             # Use the label2uri dictionary to generate the candidate uri of relation
             if chunk['class'] == 'relation':
                 phrase = chunk['chunk']
-                res = []
-                for _key, _value in self.label2uri.iteritems():
-                    score = self.pharse_similarity(_key, phrase)
-                    res.append({'label': _key, 'score': float(score), 'uri': _value})
-                res = sorted(res, key=lambda v: v['score'], reverse=True)
-                uris = []
-                for _ in res:
-                    if _['uri'] in uris:
-                        continue
-                    else:
-                        # uris.append(_['uri']) This form is wrong
+                if phrase not in self.cache:
+                    res = []
+                    for _key, _value in self.label2uri.iteritems():
+                        score = self.pharse_similarity(_key, phrase)
+                        res.append({'label': _key, 'score': float(score), 'uri': _value})
+                    res = sorted(res, key=lambda v: v['score'], reverse=True)
+                    uris = []
+                    for _ in res:
                         uris += _['uri']
-                uris = uris[:30]
-                matched_chunks.append({'chunk': chunk, 'topkmatch': uris, 'class': 'relation'})
+                    uris = uris[:30]
+                    self.cache[phrase] = uris
+                    matched_chunks.append({'chunk': chunk, 'topkmatch': uris, 'class': 'relation'})
+                else:
+                    matched_chunks.append({'chunk': chunk, 'topkmatch': self.cache[phrase], 'class': 'relation'})
+
         return matched_chunks
 
 

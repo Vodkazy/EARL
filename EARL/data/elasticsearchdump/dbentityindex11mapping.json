@@ -1,0 +1,26 @@
+{
+	"dbentityindex11": {
+		"mappings": {
+			"records": {
+				"properties": {
+					"dbpediaLabel": {
+						"type": "text",
+						"index_options": "docs",
+						"analyzer": "english"
+					},
+					"uri": {
+						"type": "keyword"
+					},
+					"wikidataLabel": {
+						"type": "text",
+						"index_options": "docs",
+						"analyzer": "english"
+					},
+                                        "edgecount": {
+                                                "type":"integer"
+                                        }
+				}
+			}
+		}
+	}
+}

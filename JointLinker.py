@@ -9,22 +9,25 @@
 import itertools
 from pybloom_live import BloomFilter
 import sys
-
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class JointLinker:
     def __init__(self):
         print "Joint Linker initializing"
         try:
-            f = open('../EARL/data/blooms/bloom1hoppredicate.pickle')
+            f = open('./download/blooms/bloom1hoppredicate.pickle')
             self.bloom_1_hop_predicate = BloomFilter.fromfile(f)
             f.close()
-            f = open('../EARL/data/blooms/bloom1hopentity.pickle')
+            f = open('./download/blooms/bloom1hopentity.pickle')
             self.bloom_1_hop_entity = BloomFilter.fromfile(f)
             f.close()
-            f = open('../EARL/data/blooms/bloom2hoppredicate.pickle')
+            f = open('./download/blooms/bloom2hoppredicate.pickle')
             self.bloom_2_hop_predicate = BloomFilter.fromfile(f)
             f.close()
-            f = open('../EARL/data/blooms/bloom2hoptypeofentity.pickle')
+            f = open('./download/blooms/bloom2hoptypeofentity.pickle')
             self.bloom_2_hop_typeof_entity = BloomFilter.fromfile(f)
             f.close()
         except Exception, e:
@@ -48,12 +51,13 @@ class JointLinker:
         cnt = 0
         for item in topk_matched_list:
             rank = 0
-            nodes[cnt] = {}
+            if cnt not in nodes:
+                nodes[cnt] = {}
             for uri in item:
                 rank += 1
                 if uri not in nodes[cnt]:
                     nodes[cnt][uri] = {'connections': 0, 'total_hops': 0, 'rank': rank}
-            if (len(nodes[cnt]) == 0):
+            if len(nodes[cnt]) == 0:
                 nodes[cnt]['null'] = {'connections': 0, 'total_hops': 0, 'rank': 100}
             cnt += 1
         _subscript = range(len(topk_matched_list))  # Discrete the index of uris set as subscript

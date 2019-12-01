@@ -10,16 +10,21 @@ import xgboost as xgb
 import numpy as np
 import sys
 import editdistance
-
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class ReRanker:
     def __init__(self):
         print "ReRanker initializing"
         try:
+            self.score_list = {}
             self.change_type_arr = {}
+            self.change_time = {}
             self.change_flag = False
             self.model = xgb.Booster({'nthread': 4})
-            self.model.load_model('model/reranker.model')
+            self.model.load_model('./model/reranker.model')
         except Exception, e:
             print e
             sys.exit(1)
@@ -47,15 +52,28 @@ class ReRanker:
             _output = self.model.predict(_input)
             prediction = (np.max(_output))
             # print _output
-            print prediction, np.min(distance)
-            if prediction < 0.1 and np.min(distance) > 1:
-                print "Change type of " + topk_res['chunktext'][_index]['chunk'] + " to entity"
+            # if prediction < 0.01 and (_index not in self.score_list.keys() or prediction < self.score_list[_index]):
+            # if prediction < 0.01 and topk_res['chunktext'][_index]['class'] == 'relation' and np.min(distance) > 1.0:
+            if prediction < 0.01 and np.min(distance) > 1.0 and ((_index not in self.change_time.keys()) or (self.change_time[_index] <= 2)):
+                if topk_res['chunktext'][_index]['class'] == 'relation':
+                    print "Change type of " + topk_res['chunktext'][_index]['chunk'] + " from " + \
+                          topk_res['chunktext'][_index]['class'] + " to entity"
+                else:
+                    print "Change type of " + topk_res['chunktext'][_index]['chunk'] + " from " + \
+                          topk_res['chunktext'][_index]['class'] + " to relation"
                 self.change_type_arr[_index] = True
                 self.change_flag = True
+                if _index not in self.change_time.keys():
+                    self.change_time[_index] = 1
+                else:
+                    self.change_time[_index] += 1
             else:
                 self.change_type_arr[_index] = False
+            self.score_list[_index] = prediction
             score_uri_list = [(float(score), uri) for score, uri in zip(_output, uris)]
             rerankedlists[_index] = sorted(score_uri_list, key=lambda x: x[0], reverse=True)
+        # return {'rerankedlists': rerankedlists, 'chunktext': topk_res['chunktext'], 'types': topk_res['types'],
+        #         'rejudge': self.change_flag, 'correct-list': self.change_type_arr}
         return {'rerankedlists': rerankedlists, 'chunktext': topk_res['chunktext'], 'types': topk_res['types'],
                 'rejudge': self.change_flag, 'correct-list': self.change_type_arr}
 

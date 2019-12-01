@@ -9,8 +9,12 @@
 from keras.models import model_from_json
 from keras.optimizers import Adam
 import numpy as np
+import string
 import sys
-
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class ErPredictor:
     def __init__(self):
@@ -19,8 +23,8 @@ class ErPredictor:
         # Load the model parameters
         # Here we use the pre-trained model by AskNow
         try:
-            model_json_file = 'model/er.json'
-            model_weight = 'model/er.h5'
+            model_json_file = './model/er.json'
+            model_weight = './model/er.h5'
             json_file = open(model_json_file, 'r')
             model_json = json_file.read()
             json_file.close()

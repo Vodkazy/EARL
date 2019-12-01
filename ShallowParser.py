@@ -7,7 +7,10 @@
   @ Software : PyCharm
 """
 from practnlptools.tools import Annotator
-
+# encoding=utf8
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 
 class ShallowParser:
     def __init__(self):
@@ -114,7 +117,7 @@ class ShallowParser:
                 temp_pharse_VP.append(item)
             elif item[1] == 'E-VP':
                 temp_pharse_VP.append(item)
-                NP_set.append(temp_pharse_VP)
+                VP_set.append(temp_pharse_VP)
                 temp_pharse_VP = []
         # print NP_set,VP_set
 

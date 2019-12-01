@@ -1,0 +1,13 @@
+Flask
+gevent
+stop-words
+keras
+sklearn
+gensim
+elasticsearch
+editdistance
+xgboost
+tensorflow
+h5py
+nltk
+pybloom_live
